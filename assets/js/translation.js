@@ -52,6 +52,12 @@ async function setLanguage(lang) {
         const data = await getLanguageData(lang);
         // Handle the data from the successful response
         console.log('Successful response:', data);
+
+        document.querySelector('html').setAttribute('lang', 'fr')
+        let current_lang_btn = document.querySelector('span.current-lang')
+        current_lang_btn.setAttribute('data-i18n', 'french_fr')
+        current_lang_btn.innerHTML = 'French'
+        setLocalLangPreference('fr')
         updateContent(data);
     } catch (error) {
         // Handle errors that occurred during the fetch or processing of the response
@@ -76,13 +82,6 @@ if (browser_lang.includes('fr')) {
 
 fr_btn.addEventListener('click', () => {
 
-    document.querySelector('html').setAttribute('lang', 'fr')
-
-    let current_lang_btn = document.querySelector('span.current-lang')
-
-    current_lang_btn.setAttribute('data-i18n', 'french_fr')
-    current_lang_btn.innerHTML = 'French'
-    setLocalLangPreference('fr')
     setLanguage('fr')
 })
 
@@ -96,14 +95,10 @@ en_btn.addEventListener('click', () => {
 })
 
 function setLanguageAuto() {
-    if (navigator.language.includes('fr') || getLangPreference().includes('fr')) {
-        document.querySelector('html').setAttribute('lang', 'fr')
+    if (navigator.language.includes('fr') && getLangPreference().includes('fr')) {
 
-        let current_lang_btn = document.querySelector('span.current-lang')
-
-        current_lang_btn.setAttribute('data-i18n', 'french_fr')
-        current_lang_btn.innerHTML = 'French'
-        setLocalLangPreference('fr')
+        setLanguage('fr')
+    } else if (getLangPreference().includes('fr')) {
         setLanguage('fr')
     }
 
