@@ -1,8 +1,11 @@
+let fr_btn = document.querySelector('ul.sous a');
+let en_btn = document.querySelector('ul.sous li:last-child a');
+
 function returnBrowserLanguagePref() {
     return navigator.language
 }
 
-function getLangLocalStorage() {
+function getLangPreference() {
 
     return localStorage.getItem('language')
 }
@@ -20,19 +23,39 @@ function updateContent(lang_data) {
 
 
 async function getLanguageData(lang) {
-    const response = await fetch(`${lang}.json`)
-    return response.json()
+
+    let apiUrl = `http://localhost:8000/assets/js/language/${lang}.json`
+
+    try {
+        const response = await fetch(apiUrl);
+
+        // Check if the response status is OK (status code 200-299)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        // Parse the response JSON and return it
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        // Handle errors that occurred during the fetch or processing of the response
+        console.error('Error:', error);
+        throw error; // Re-throw the error for further handling, if needed
+    }
 }
 
-function setLanguage(lang) {
-    const lang_data = french_t
-    console.log(lang_data)
-    updateContent(lang_data)
+async function setLanguage(lang) {
+
+    try {
+        const data = await getLanguageData(lang);
+        // Handle the data from the successful response
+        console.log('Successful response:', data);
+        updateContent(data);
+    } catch (error) {
+        // Handle errors that occurred during the fetch or processing of the response
+        console.error('Error:', error);
+    }
 }
-
-let fr_btn = document.querySelector('ul.sous a');
-let en_btn = document.querySelector('ul.sous li:last-child a');
-
 
 // change language without button click
 let browser_lang = returnBrowserLanguagePref()
@@ -42,11 +65,11 @@ if (browser_lang.includes('fr')) {
 }
 
 // change language according to localstorage
-let local_storage = localStorage.getItem('language')
-if (local_storage) {
-    if (local_storage.includes('fr'))
-        setLanguage('fr')
-}
+// let local_storage = localStorage.getItem('language')
+// if (local_storage) {
+//     if (local_storage.includes('fr'))
+//         setLanguage('fr')
+// }
 
 
 fr_btn.addEventListener('click', () => {
@@ -57,7 +80,31 @@ fr_btn.addEventListener('click', () => {
 
     current_lang_btn.setAttribute('data-i18n', 'french_fr')
     current_lang_btn.innerHTML = 'French'
-
+    setLocalLangPreference('fr')
     setLanguage('fr')
+})
+
+en_btn.addEventListener('click', () => {
+
+    document.querySelector('html').setAttribute('lang', 'en')
+
+    setLocalLangPreference('en')
+    window.location.reload()
 
 })
+
+function setLanguageAuto() {
+    if (navigator.language.includes('fr') || getLangPreference().includes('fr')) {
+        document.querySelector('html').setAttribute('lang', 'fr')
+
+        let current_lang_btn = document.querySelector('span.current-lang')
+
+        current_lang_btn.setAttribute('data-i18n', 'french_fr')
+        current_lang_btn.innerHTML = 'French'
+        setLocalLangPreference('fr')
+        setLanguage('fr')
+    }
+
+}
+
+setLanguageAuto()

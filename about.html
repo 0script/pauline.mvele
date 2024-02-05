@@ -26,6 +26,19 @@
 		<header id="header" class="alt style2">
 			<a href="index.html" class="logo"><strong>PAULINE</strong> <span>MVELE</span></a>
 			<nav>
+				<ul class="lang-option">
+					<li class="deroulant">
+						<a href="javascript:void(0)" title="French Language" id="btn-langue"><span class="current-lang"
+								data-i18n="english_fr">English</span>
+							<span>&#11163;</span></a>
+						<ul class="sous">
+							<li><a href="javascript:void(0)" title="French Language" data-i18n="french_fr">French</a>
+							</li>
+							<li><a href="javascript:void(0)" title="English Language" data-i18n="english_fr">English</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
 				<a href="#menu">Menu</a>
 			</nav>
 		</header>
@@ -33,12 +46,12 @@
 		<!-- Menu -->
 		<nav id="menu">
 			<ul class="links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="movies.html">My Work</a></li>
+				<li><a href="index.html" data-i18n="home_fr">Home</a></li>
+				<li><a href="about.html" data-i18n="about_fr">About</a></li>
+				<li><a href="movies.html" data-i18n="my_work_fr">My Work</a></li>
 			</ul>
 			<ul class="actions stacked">
-				<li><a href="#" class="button fit">Contact</a></li>
+				<li><a href="#contact" class="button fit" data-i18n="contact_fr">Contact</a></li>
 			</ul>
 		</nav>
 
@@ -50,7 +63,7 @@
 					<img src="images/banner.jpg" alt="" />
 				</span>
 				<header class="major">
-					<h1>🎬 About Pauline Mvele Filmmaker & Social Activist</h1>
+					<h1 data-i18n="">🎬 About Pauline Mvele Filmmaker & Social Activist</h1>
 				</header>
 				<div class="content">
 					<p>
@@ -70,9 +83,9 @@
 			<section id="one">
 				<div class="inner">
 					<header class="major">
-						<h2>🌍 A Cinematic Crusader with a Journalistic Heritage</h2>
+						<h2 data-i18n="about_title_2">🌍 A Cinematic Crusader with a Journalistic Heritage</h2>
 					</header>
-					<p>
+					<p data-i18n="about_title_2_p">
 						Rooted in the vibrant landscapes of Gabon, my perspective as
 						a filmmaker is shaped by my previous experiences as a journalist.
 						I've penned impactful articles for Amina magazines, seamlessly
@@ -91,7 +104,7 @@
 					<div class="content">
 						<div class="inner">
 							<header class="major">
-								<h3>🌈 Storytelling with Purpose</h3>
+								<h3 data-i18n="about_title_3">🌈 Storytelling with Purpose</h3>
 							</header>
 							<p>
 								I believe in the transformative power of storytelling.
@@ -113,9 +126,9 @@
 					<div class="content">
 						<div class="inner">
 							<header class="major">
-								<h3>👩‍👧‍👦 Championing the Vulnerable</h3>
+								<h3 data-i18n="about_title_4">👩‍👧‍👦 Championing the Vulnerable</h3>
 							</header>
-							<p>
+							<p data-i18n="about_title_4_p">
 								At the heart of my cinematic endeavors lies a fervent dedication to
 								those often marginalized and voiceless. My lens captures the resilience,
 								strength, and untold stories of individuals affected by violence, advocating
@@ -154,9 +167,9 @@
 			<section id="three">
 				<div class="inner">
 					<header class="major">
-						<h2>📰 From Pen to Lens: A Journalistic Journey</h2>
+						<h2 data-i18n="about_title_5">📰 From Pen to Lens: A Journalistic Journey</h2>
 					</header>
-					<p>
+					<p data-i18n="about_title_5_p">
 						Before venturing into filmmaking, I honed my storytelling skills in the
 						journalism field, contributing compelling articles to prestigious magazines.
 						This journalistic heritage enriches my filmmaking, infusing it with a deep
@@ -172,9 +185,9 @@
 			<section id="four">
 				<div class="inner">
 					<header class="major">
-						<h2>🎥 Join the Movement</h2>
+						<h2 data-i18n="about_title_6">🎥 Join the Movement</h2>
 					</header>
-					<p>
+					<p data-i18n="about_title_6_p">
 						Step into the cinematic world curated by me, where every frame is a brushstroke on the
 						canvas of societal change. Join me in the pursuit of a world where stories not only
 						entertain but also empower and ignite meaningful conversations.
@@ -191,9 +204,9 @@
 			<section id="five">
 				<div class="inner">
 					<header class="major">
-						<h2>🎬 Join the Conversation</h2>
+						<h2 data-i18n="about_title_7">🎬 Join the Conversation</h2>
 					</header>
-					<p>
+					<p data-i18n="about_title_7_p">
 						Follow me on social media to stay updated on upcoming projects, events,
 						and advocacy initiatives. Let's amplify the impact of storytelling as a
 						powerful instrument for societal change.
@@ -212,7 +225,7 @@
 					<form method="post" action="#">
 						<div class="fields">
 							<div class="field half">
-								<label for="name">Name</label>
+								<label for="name" data-i18n="name_fr">Name</label>
 								<input type="text" name="name" id="name" />
 							</div>
 							<div class="field half">
@@ -288,7 +301,8 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/translation.js"></script>
 
 </body>
 
-</html>
+</html>	

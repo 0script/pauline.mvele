@@ -1,0 +1,38 @@
+/* a.btn-langue {
+    margin: 5px;
+}
+
+a.btn-langue.active {
+    background-color: #101010;
+    color: white;
+} */
+
+nav ul.lang-option {
+    list-style-type: none;
+}
+
+ul.sous {
+    list-style: none;
+}
+
+li.deroulant {
+    float: left;
+    text-align: center;
+    background-color: #4348A2;
+    margin-top: 0.2rem;
+
+}
+
+li.deroulant ul {
+    display: none;
+}
+
+li.deroulant:hover ul {
+    display: block;
+}
+
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}

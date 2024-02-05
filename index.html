@@ -26,9 +26,20 @@
 			<a href="index.html" class="logo"><strong>PAULINE</strong> <span>MVELE</span></a>
 
 			<nav>
-				<!-- <a href="javascript:void(0)">FFR
-					<div id="google_translate_element"></div>
-				</a> -->
+
+				<ul class="lang-option">
+					<li class="deroulant">
+						<a href="javascript:void(0)" title="French Language" id="btn-langue"><span class="current-lang"
+								data-i18n="english_fr">English</span>
+							<span>&#11163;</span></a>
+						<ul class="sous">
+							<li><a href="javascript:void(0)" title="French Language" data-i18n="french_fr">French</a>
+							</li>
+							<li><a href="javascript:void(0)" title="English Language" data-i18n="english_fr">English</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
 
 				<a href="#menu">Menu</a>
 			</nav>
@@ -38,12 +49,12 @@
 		<nav id="menu">
 
 			<ul class="links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="movies.html">My Work</a></li>
+				<li><a href="index.html" data-i18n="home_fr">Home</a></li>
+				<li><a href="about.html" data-i18n="about_fr">About</a></li>
+				<li><a href="movies.html" data-i18n="my_work_fr">My Work</a></li>
 			</ul>
 			<ul class="actions stacked">
-				<li><a href="#contact" class="button fit">Contact</a></li>
+				<li><a href="#contact" class="button fit" data-i18n="contact_fr">Contact</a></li>
 			</ul>
 		</nav>
 
@@ -51,17 +62,17 @@
 		<section id="banner" class="major">
 			<div class="inner">
 				<header class="major">
-					<h1>Pauline Mvélé, Gabonese director</h1>
+					<h1 data-i18n="home_title_fr">Pauline Mvélé, Gabonese director</h1>
 
 				</header>
 				<div class="content">
-					<p>
+					<p data-i18n="home_description_fr">
 						Greetings, and welcome I am a filmmaker hailing from Gabon. <br>
 						My cinematic creations are not just stories; they are powerful vehicles for change, <br>
 						meticulously designed to unravel the complexities of societal issues.
 					</p>
 					<ul class="actions">
-						<li><a href="#two" class="button next scrolly">Read More</a></li>
+						<li><a href="#two" class="button next scrolly" data-i18n="home_banner_btn">Read More</a></li>
 					</ul>
 
 				</div>
@@ -79,8 +90,8 @@
 						<img src="images/pic01.jpg" alt="" />
 					</span>
 					<header class="major">
-						<h3><a href="movies.html" class="link">My Movies</a></h3>
-						<p>Discover movies made by Pauline Mvele</p>
+						<h3><a href="movies.html" class="link" data-i18n="my_work_fr">My Movies</a></h3>
+						<p data-i18n="my_work_p">Discover movies made by Pauline Mvele</p>
 					</header>
 				</article>
 				<article>
@@ -88,8 +99,8 @@
 						<img src="images/pic04.jpg" alt="" />
 					</span>
 					<header class="major">
-						<h3><a href="#contact" class="link">CONTACT</a></h3>
-						<p>Get all my contact</p>
+						<h3><a href="contact.html" class="link" data-i18n="contact_fr">CONTACT</a></h3>
+						<p data-i18n="contact_p">Get all my contact</p>
 					</header>
 				</article>
 
@@ -118,9 +129,9 @@
 			<section id="two">
 				<div class="inner">
 					<header class="major">
-						<h2>About Me</h2>
+						<h2 data-i18n="about_fr">About Me</h2>
 					</header>
-					<p>
+					<p data-i18n="contact_p">
 						Greetings, and welcome to my profound world, a distinguished filmmaker with an unwavering
 						commitment to social justice. I doesn't just create movies; I crafts powerful narratives that
 						serve as catalysts for change.
@@ -129,7 +140,7 @@
 						I honed the skill of telling impactful stories that resonate with authenticity.
 					</p>
 					<ul class="actions">
-						<li><a href="about.html" class="button next">Read More</a></li>
+						<li><a href="about.html" class="button next" data-i18n="home_banner_btn"="">Read More</a></li>
 					</ul>
 				</div>
 			</section>
@@ -143,7 +154,7 @@
 					<form method="post" action="#">
 						<div class="fields">
 							<div class="field half">
-								<label for="name">Name</label>
+								<label for="name" data-i18n="name_fr">Name</label>
 								<input type="text" name="name" id="name" />
 							</div>
 							<div class="field half">
@@ -219,7 +230,11 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/translation.js"></script>
-
+	<script>
+		function gofooter() {
+			window.scrollTo(0, document.body.scrollHeight)
+		}
+	</script>
 
 </body>
 

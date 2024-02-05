@@ -26,8 +26,19 @@
 		<header id="header" class="alt">
 			<a href="index.html" class="logo"><strong>PAULINE</strong> <span>MVELE</span></a>
 			<nav>
-				<!-- <a href="">EN</a>
-						<a href="">FR</a> -->
+				<ul class="lang-option">
+					<li class="deroulant">
+						<a href="javascript:void(0)" title="French Language" id="btn-langue"><span class="current-lang"
+								data-i18n="english_fr">English</span>
+							<span>&#11163;</span></a>
+						<ul class="sous">
+							<li><a href="javascript:void(0)" title="French Language" data-i18n="french_fr">French</a>
+							</li>
+							<li><a href="javascript:void(0)" title="English Language" data-i18n="english_fr">English</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
 				<a href="#menu">Menu</a>
 			</nav>
 		</header>
@@ -35,12 +46,12 @@
 		<!-- Menu -->
 		<nav id="menu">
 			<ul class="links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="movies.html">My Work</a></li>
+				<li><a href="index.html" data-i18n="home_fr">Home</a></li>
+				<li><a href="about.html" data-i18n="about_fr">About</a></li>
+				<li><a href="movies.html" data-i18n="my_work_fr">My Work</a></li>
 			</ul>
 			<ul class="actions stacked">
-				<li><a href="#contact" class="button fit">Contact</a></li>
+				<li><a href="#contact" class="button fit" data-i18n="contact_fr">Contact</a></li>
 			</ul>
 		</nav>
 
@@ -53,10 +64,10 @@
 					<img src="images/banner.jpg" alt="" />
 				</span>
 				<header class="major">
-					<h1>Latest Work</h1>
+					<h1 data-i18n="latest_work_fr">Latest Work</h1>
 				</header>
 				<div class="content">
-					<p>A glance at the latest projects I worked on.</p>
+					<p data-i18n="latest_work_p">A glance at the latest projects I worked on.</p>
 				</div>
 			</div>
 		</section>
@@ -68,9 +79,9 @@
 			<section id="one">
 				<div class="inner">
 					<header class="major">
-						<h2>Work as a movie director</h2>
+						<h2 data-i18n="my_work_h2_1">Work as a movie director</h2>
 					</header>
-					<p>
+					<p data-i18n="my_work_h2_p">
 						Since stepping into the world of filmmaking in 2009, I've been on a mission
 						to use the power of documentary storytelling to address pressing social
 						issues. Over the past decade, I've strived to seamlessly blend artistry with
@@ -88,9 +99,9 @@
 					<div class="content">
 						<div class="inner">
 							<header class="major">
-								<h3>Mivova yato (Women's Voices) 2022</h3>
+								<h3 data-i18n="mivova_yato_h3">Mivova yato (Women's Voices) 2022</h3>
 							</header>
-							<p>
+							<p data-i18n="mivova_yato_p">
 								Mivova yato (Women's Voices), is a poignant film from Gabon, courageously
 								amplifies the silenced voices of women who have endured the harrowing experiences
 								of sexual assault. Through intimate interviews and powerful narratives,
@@ -124,9 +135,9 @@
 					<div class="content">
 						<div class="inner">
 							<header class="major">
-								<h3>No family 2013</h3>
+								<h3 data-i18n="movie_title_3">No family 2013</h3>
 							</header>
-							<p>
+							<p data-i18n="movie_p_3">
 								In Gabon, "Without family" is the name given to the central prison of Libreville,
 								because the inmates there are stigmatized and rejected from their family world.
 								Knowing the importance of the family in Africa, this name clearly demonstrates the
@@ -161,9 +172,9 @@
 					<div class="content">
 						<div class="inner">
 							<header class="major">
-								<h3>HANG ON!</h3>
+								<h3 data-i18n="movie_title_4">HANG ON!</h3>
 							</header>
-							<p>
+							<p data-i18n="movie_p_4">
 								Three women and a couple, all HIV-positive, decided to testify openly to denounce the
 								stigma and help
 								those hiding in their hands. Through their daily lives, their struggle in community
@@ -191,7 +202,7 @@
 							<header class="major">
 								<h3>Elias</h3>
 							</header>
-							<p>
+							<p data-i18n="movie_p_5">
 								In a brief yet impactful narrative, the short film ELIAS confronts the stark reality of
 								domestic violence,
 								focusing on the lives of a women subjected to abuse by her husbands. Through evocative
@@ -214,9 +225,9 @@
 			<section id="three">
 				<div class="inner">
 					<header class="major">
-						<h2>coordinator of the libreville documentary stopovers festival</h2>
+						<h2 data-i18n="my_work_h2_2">coordinator of the libreville documentary stopovers festival</h2>
 					</header>
-					<p>
+					<p data-i18n="my_work_h2_2_p">
 						As a dedicated filmmaker and visionary, I proudly take on the role of organizer for the
 						'Libreville Documentary Stopover,'
 						a festival celebrating the power of non-fiction storytelling. Guided by my passion for impactful
@@ -243,7 +254,7 @@
 					<form method="post" action="#">
 						<div class="fields">
 							<div class="field half">
-								<label for="name">Name</label>
+								<label for="name" data-i18n="name_fr">Name</label>
 								<input type="text" name="name" id="name" />
 							</div>
 							<div class="field half">
@@ -317,6 +328,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/translation.js"></script>
 
 </body>
 
