@@ -24,7 +24,9 @@ function updateContent(lang_data) {
 
 async function getLanguageData(lang) {
 
-    let apiUrl = `http://localhost:8000/assets/js/language/${lang}.json`
+
+    let apiUrl = `https://paulinemvele.netlify.app/assets/js/language/${lang}.json`
+    // let apiUrl = `http://localhost:8000/assets/js/language/${lang}.json`
 
     try {
         const response = await fetch(apiUrl);
